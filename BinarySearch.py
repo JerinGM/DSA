@@ -1,7 +1,9 @@
-input_list = [8, 8, 6, 6, 6, 6, 6, 6, 5, 4, 3, 2, 1]
+# input_list = [8, 8, 6, 6, 6, 6, 6, 6, 5, 4, 3, 2, 1]
 # input_list = [9, 8, 6, 5, 4, 3, 2, 1, 0]
 # input_list = [5, 4, 3, 2, 1]
-query = 8
+input_list = [10, 8, 8, 7, 7, 6, 5, 4, 4, 3, 3, 3, 2, 2, 2, 1, 0, -1, -1, -1, -4, -5, -10]
+
+query = -1
 
 
 def binary_search_function(input_list, query):
@@ -11,7 +13,7 @@ def binary_search_function(input_list, query):
     while low <= high:
         mid = (high + low) // 2
         # print(f"Low is {low}\nHigh is {high}\n Mid is {mid}")
-        if input_list[mid] == query and input_list[mid-1] != query:
+        if input_list[mid] == query and (mid == 0 or input_list[mid-1] != query):
             print(f"Found at index {mid}")
             found = True
             break
