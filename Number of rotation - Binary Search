@@ -1,0 +1,33 @@
+# input_list = [6, 7, 8, 9, 1, 2, 3, 4, 5]
+# input_list = [1, 2, 3, 4, 5, 6, 7, 8]
+# input_list = []
+# input_list = [6, 6, 6, 6, 7, 8, 8, 8, 8, 8, 9, 1, 1, 1, 1, 0]
+input_list = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 5, 5]
+
+
+def binary_search(input_list):
+    rotated = False
+    high = len(input_list)-1
+    low = 0
+    if len(input_list) == 0:
+        rotated = True
+        print("Empty List")
+    while low <= high:
+        mid = (high + low) // 2
+        print(f"{low}\n{high}\n{mid}")
+        if mid > 0 and input_list[mid] < input_list[mid - 1]:
+            print(f"Smallest number is {input_list[mid]} at index {mid}. "
+                  f"Hence we can say that the list is rotated {mid} times")
+            rotated = True
+            break
+        elif input_list[mid] < input_list[high]:
+            high = mid - 1
+        elif input_list[mid] >= input_list[high]:
+            low = mid + 1
+        elif low == high:
+            break
+    if not rotated:
+        print("Not rotated")
+
+
+binary_search(input_list)
