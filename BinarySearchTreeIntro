@@ -4,6 +4,7 @@ class Tree:
         self.left = None
         self.right = None
 
+# node0_object = (left_subtree, key, right_subtree) = node0_object = (3,2,5) -> None when no child
 
 node0_object = Tree(2)
 node1_object = Tree(3)
