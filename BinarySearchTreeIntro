@@ -1,0 +1,27 @@
+class Tree:
+    def __init__(self, key):
+        self.key = key
+        self.left = None
+        self.right = None
+
+
+node0_object = Tree(2)
+node1_object = Tree(3)
+node2_object = Tree(5)
+node3_object = Tree(1)
+node4_object = Tree(3)
+node5_object = Tree(7)
+node6_object = Tree(4)
+node7_object = Tree(6)
+node8_object = Tree(8)
+
+node0_object.left = node1_object
+node0_object.right = node2_object
+node1_object.left = node3_object
+node2_object.left = node4_object
+node2_object.right = node5_object
+node4_object.right = node6_object
+node5_object.left = node7_object
+node5_object.right = node8_object
+
+print(node0_object.right.key)
