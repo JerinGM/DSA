@@ -1,3 +1,5 @@
+# Bringing the smallest number to 0th index in first iteration, second smallest number to 1st index in second iteration and so on
+
 input_list = [24, 36, 1, 0, 9, 4, 3, 22, 489, 55, 0, 2, 1, 10, 20, 30, 100, 0, 1, 22]
 # input_list = [5, 4, 3, 2, 1]
 # input_list = [34, 56, 789, 33, 2, 0, 1, 2323, 44]
